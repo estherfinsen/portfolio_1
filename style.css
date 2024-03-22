@@ -26,67 +26,7 @@ img {
   height: auto;
 }
 
-/***MENU***/
-
-.logo img {
-  width: 130px;
-  height: 120px;
-}
-.logo {
-  display: inline-block;
-  width: 900px;
-  padding: 3%;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-  top: -0.5%;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  height: 20%;
-}
-
-#menu.overlay {
-  visibility: visible;
-  opacity: 1;
-  padding-top: 100px;
-  z-index: 1;
-}
-
-#burger-menu {
-  cursor: pointer;
-}
-
-#menu ul {
-  list-style: none;
-  display: flex;
-}
-
-.forste {
-  margin-right: 50px;
-}
-
-.sidste {
-  margin-right: 40px;
-}
-
-#menu a {
-  text-decoration: none;
-  font-size: 3cqw;
-  color: blue;
-}
-
-#menu a:hover {
-  color: #ff0000;
-}
-
+/**MEDIA***/
 @media only screen and (max-width: 800px) {
   .logo img {
     width: 65px;
@@ -201,6 +141,89 @@ nav {
     margin-bottom: 30px;
     text-decoration: none;
   }
+
+  /****PROJEKTER******/
+  #proj_over {
+    font-size: 10cqw;
+    color: blue;
+    font-family: "Chewy", cursive;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+  }
+  /***GRID mobile******/
+  #pro1,
+  #pro2,
+  #pro3,
+  #pro4,
+  #pro5,
+  #pro6,
+  #pro7,
+  #pro8,
+  #pro9 {
+    margin-top: 10%;
+  }
+}
+
+/***MENU***/
+
+.logo img {
+  width: 130px;
+  height: 120px;
+}
+.logo {
+  display: inline-block;
+  width: 1155px;
+  padding: 3%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: -0.5%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 20%;
+}
+
+#menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  z-index: 1;
+}
+
+#burger-menu {
+  cursor: pointer;
+}
+
+#menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.forste {
+  margin-right: 50px;
+}
+
+.sidste {
+  margin-right: 65px;
+}
+
+#menu a {
+  text-decoration: none;
+  font-size: 3cqw;
+  color: blue;
+}
+
+#menu a:hover {
+  color: #ff0000;
 }
 
 /******FOOTER*****/
@@ -283,16 +306,7 @@ footer {
   overflow-x: hidden;
   color: blue;
 }
-@media only screen and (max-width: 700px) {
-  .program {
-    position: relative;
-    width: 100vw;
-    max-width: 100%;
-    overflow-x: hidden;
-    color: blue;
-    height: 48px;
-  }
-}
+
 .program p {
   font-size: 7cqw;
 }
@@ -323,33 +337,31 @@ footer {
     transform: scale(0.95);
   }
 }
-#forbil2 {
-  padding-bottom: 5%;
-  justify-self: center;
-  width: 30%;
-  margin: 0 auto;
+.forside {
+  font-size: 1.3cqw;
+  color: blue;
+  font-family: "Space Mono", monospace;
+  width: auto;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+}
+.forside_over {
+  font-family: "Chewy", cursive;
+  font-size: 5cqw;
 }
 
-/****PROJEKTER******/
-#proj_over {
-  font-size: 10cqw;
-  color: blue;
-  font-family: "Chewy", cursive;
-  margin-top: 20%;
-  margin-bottom: 5%;
-  margin-left: 2%;
+.forside_tekst {
+  grid-column: 1;
+
+  p {
+    padding-top: 2%;
+  }
 }
-/***GRID mobile******/
-#pro1,
-#pro2,
-#pro3,
-#pro4,
-#pro5,
-#pro6,
-#pro7,
-#pro8,
-#pro9 {
-  margin-top: 10%;
+.forside_billede {
+  grid-column: 2;
+  height: 70%;
 }
 
 /****ALLE PRO SIDERNE*****/
@@ -386,8 +398,8 @@ footer {
   height: auto;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 10% 5% 0 5%;
+  width: 73.5%;
+  margin: 5% auto;
   background-color: white;
 }
 .pro_alle_bil {
@@ -475,10 +487,23 @@ footer {
   width: auto;
   padding: 5%;
   padding-top: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+}
+
+.om_tekst {
+  grid-column: 1;
+}
+.om_billede {
+  grid-column: 2;
+  align-self: center;
 }
 
 .om div {
   padding-top: 1%;
+  display: flex;
+  flex-direction: column;
 }
 .stor {
   font-size: 1.5cqw;
@@ -487,9 +512,6 @@ footer {
 
 .rum {
   padding-bottom: 2%;
-}
-.om_img {
-  padding-top: 5%;
 }
 
 @media (min-width: 840px) {
