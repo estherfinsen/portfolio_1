@@ -163,6 +163,11 @@ img {
   #pro9 {
     margin-top: 10%;
   }
+
+  /*** Footer mobile*****/
+  #fot_bil {
+    width: 120%;
+  }
 }
 
 /***MENU***/
